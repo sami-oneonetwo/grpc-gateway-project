@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package service1;
+
+option go_package = "github.com/sami-oneonetwo/grpc-gateway-project/api/service1";
+
+service Service1 {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
